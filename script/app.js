@@ -22,7 +22,7 @@ const endEdit = document.querySelector(".end-text.icon--edit");
 const body = document.querySelector("body");
 
 const digitCount = (num) => {
-    return String(num).length; 
+    return (String(num)).length; 
 }
 
 const width_of_digit = 1;
@@ -35,9 +35,10 @@ endEdit.onclick = () => {
     endText.innerText = prompt("End:");
 }
 
-let start, end, actual, guess, score, highestScore;
+let start, end, actual, guess, score, highestScore, computedMinWidth;
 
 resetPageButton.onclick = () => {
+    numberToBeGuessed.innerText = "?";
     if(startText.innerText == "") {
         startEdit.dispatchEvent(new Event("click"));
     }
@@ -53,8 +54,9 @@ resetPageButton.onclick = () => {
     actual = Math.round((end - start) * Math.random()) + start;
     console.log(`actual is ${actual}`);
 
-
-    numberToBeGuessed.style.minWidth = `${digitCount(end) * 64}px`
+    computedMinWidth = digitCount(end) * 64;
+    numberToBeGuessed.style.minWidth = `${computedMinWidth}px`;
+    myGuess.style.minWidth=`${computedMinWidth}px`;
 
     highestScore = Number(highestScoreValue.innerText);
     score = end-start + 1;
