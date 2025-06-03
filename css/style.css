@@ -84,7 +84,8 @@ button:active {
     padding: 16px;
     font-size: 64px;
     bottom: -15%;
-    left: 41%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 hr {
