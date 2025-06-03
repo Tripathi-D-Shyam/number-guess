@@ -52,7 +52,6 @@ resetPageButton.onclick = () => {
 
 
     actual = Math.round((end - start) * Math.random()) + start;
-    console.log(`actual is ${actual}`);
 
     computedMinWidth = digitCount(end) * 64;
     numberToBeGuessed.style.minWidth = `${computedMinWidth}px`;
