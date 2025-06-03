@@ -21,6 +21,12 @@ const endEdit = document.querySelector(".end-text.icon--edit");
 
 const body = document.querySelector("body");
 
+const digitCount = (num) => {
+    return String(num).length; 
+}
+
+const width_of_digit = 1;
+
 startEdit.onclick = () => {
     startText.innerText = prompt("Start:");
 }
@@ -47,7 +53,9 @@ resetPageButton.onclick = () => {
     actual = Math.round((end - start) * Math.random()) + start;
     console.log(`actual is ${actual}`);
 
-    // numberToBeGuessed.innerText = `${actual}`;
+
+    numberToBeGuessed.style.minWidth = `${digitCount(end) * 64}px`
+
     highestScore = Number(highestScoreValue.innerText);
     score = end-start + 1;
 
