@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <div id="above">
+        <h1 id="declaration-to-guess">Guess My Number!</h1>
+        <button id="reset-page__button">Again!</button>
+        <div id="number__to-be-guessed">?</div>
+
+
+        <p id="info">(Between <span id="start-text"></span><sup><img class="start-text icon--edit" src="images/edit-button.svg" alt=""/></sup> and <span id="end-text"></span><sup><img class="end-text icon--edit" src="images/edit-button.svg" alt=""/></sup>)</p>
+    </div>
+    <hr>
+
+    <div id="below">
+        <div id="input-button-pair">
+            <input id="my-guess" type="number">
+            <button id="check-my-guess__button">Check!</button>
+        </div>
+        <ul id="meta-info">
+            <li id="is-the-guess-correct">Start Guessing...</li>
+            <li id="score">Score: <span id="score__value"></span></li>
+            <li id="highest-score">Highscore: <span id="highest-score__value">0</span></li>
+        </ul>
+    </div>
+
+    <script src="script/app.js"></script>
+</body>
+</html>
